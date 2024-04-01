@@ -9,7 +9,7 @@ function Error404() {
       <Navbar />
       <div
         className="
-        text-white text-center py-24
+        text-white text-center py-24 h-screen
       "
       >
         <h1

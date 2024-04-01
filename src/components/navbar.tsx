@@ -7,14 +7,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { MenuIcon } from "lucide-react";
+import { ChevronDown, MenuIcon } from "lucide-react";
 
 function Navbar() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 380); // Adjust the breakpoint as needed
+      setIsSmallScreen(window.innerWidth < 500); // Adjust the breakpoint as needed
     };
 
     handleResize(); // Call on initial load
@@ -51,6 +51,12 @@ function Navbar() {
                 <Link to="/projects">Projects</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
+                <Link to="/rootguide">Root guide</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/drivers">Drivers</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
                 <a
                   href="
                   https://github.com/flandolf"
@@ -77,6 +83,22 @@ function Navbar() {
                 Projects
               </Button>
             </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button size="sm" variant="link">
+                  <span>Android Stuff</span>
+                  <ChevronDown />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>
+                  <Link to="/rootguide">Root guide</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link to="/drivers">Drivers</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="https://github.com/flandolf">
               <Button size="sm" variant="link">
                 GitHub
