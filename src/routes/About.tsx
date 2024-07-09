@@ -58,7 +58,7 @@ function About() {
               <span className="font-bold">GPU:</span> 16 Core Apple GPU
             </p>
             <p>
-              <span className="font-bold">OS:</span> MacOS 14 (Sonoma)
+              <span className="font-bold">OS:</span> macOS 15 (Sequoia Beta)
             </p>
           </div>
           <div>
@@ -78,7 +78,7 @@ function About() {
               <span className="font-bold">GPU:</span> Adreno 750
             </p>
             <p>
-              <span className="font-bold">OS:</span> Android 14
+              <span className="font-bold">OS:</span> OxygenOS 14 (Android 14)
             </p>
           </div>
         </div>
@@ -86,10 +86,6 @@ function About() {
           <h1 className="text-3xl md:text-4xl font-bold pt-8">Other Info:</h1>
           <p className="text-lg md:text-xl">
             <span className="font-bold">Editor:</span> Visual Studio Code
-          </p>
-          <p className="text-lg md:text-xl">
-            <span className="font-bold">Favourite Video Game:</span> Fortnite
-            (unreal btw.)
           </p>
           <p className="text-lg md:text-xl">
             <span className="font-bold">Hobbies:</span> I enjoy playing video

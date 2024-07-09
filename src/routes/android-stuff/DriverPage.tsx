@@ -6,7 +6,7 @@ function DriverPage() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col min-h-screen p-8 lg:px-36 space-y-8">
+      <div className="flex flex-col min-h-screen px-4 lg:px-8 space-y-8">
         <h1 className="text-5xl text-orange-300 font-semibold">
           Driver Downloads
         </h1>

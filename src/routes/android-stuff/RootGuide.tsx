@@ -5,13 +5,12 @@ function RootGuidePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex-grow p-8 lg:p-36 lg:pt-8">
-        <h1 className="text-5xl text-orange-300 font-semibold">Root guide</h1>
+      <div className="flex-grow px-8 space-y-3">
+        <h1 className="text-7xl text-orange-300 font-semibold">Root guide</h1>
         <p className="text-gray-500">
           Your warranty is now void. Use at own risk, I am not responsible for
           any damage caused to your device.
         </p>
-        <div className="h-4"></div>
         <h2 className="text-2xl">Why should I root?</h2>
         <p>
           Rooting your device gives you full control over your device. You can
@@ -163,7 +162,10 @@ function RootGuidePage() {
           </li>
         </ol>
         <h2 className="text-3xl">APatch Method:</h2>
-        <p>Apatch is marginally the same to KernelSU, but with a few differences. You can only patch using boot.img, not init_boot.</p>
+        <p>
+          Apatch is marginally the same to KernelSU, but with a few differences.
+          You can only patch using boot.img, not init_boot.
+        </p>
         <h3 className="text-2xl">Congratulations!</h3>
       </div>
       <Footer />

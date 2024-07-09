@@ -9,7 +9,7 @@ function Projects() {
   return (
     <div className="flex flex-col min-h-screen text-xl">
       <Navbar />
-      <div className="flex-grow  text-start py-8 sm:py-24 px-4 sm:px-8 space-y-2">
+      <div className="flex-grow  text-start py-4 px-4 sm:px-8 space-y-2">
         <h1 className="text-4xl sm:text-8xl font-bold py-4 sm:py-8">
           Projects
         </h1>

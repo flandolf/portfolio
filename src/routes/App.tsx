@@ -15,9 +15,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="px-3 lg:px-8 py-6 lg:py-16 text-center space-y-3 text-lg md:text-xl">
+      <div className="px-3 lg:px-8 py-6 lg:py-16 text-center space-y-6 text-lg md:text-xl">
         <h1
-          className="text-4xl md:text-6xl font-bold"
+          className="text-8xl md:text-9xl font-bold"
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(255,246,135,1) 0%, rgba(255,76,0,1) 100%)",
