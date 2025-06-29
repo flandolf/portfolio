@@ -11,23 +11,22 @@ import {
 } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
+// Common utility class strings
+const sectionWrapper = "px-4 md:px-8 text-lg";
+const titleStyles = "text-4xl font-bold text-center";
+const cardGrid = "grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-8";
+
 function App() {
   return (
     <div>
       <Navbar />
-      <div className="px-3 lg:px-8 py-6 lg:py-16 text-center space-y-6 text-lg md:text-xl">
-        <h1
-          className="text-8xl md:text-9xl font-bold"
-          style={{
-            backgroundImage:
-              "linear-gradient(90deg, rgba(255,246,135,1) 0%, rgba(255,76,0,1) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+
+      {/* Hero Section */}
+      <div className="p-6 text-center space-y-6 text-lg">
+        <h1 className="text-[9.5rem] font-bold bg-gradient-to-r from-blue-700 to-pink-400 bg-clip-text text-transparent m-0">
           flandolf!
         </h1>
-        <p>
+        <p className="font-semibold">
           Hi! I'm a <span className="text-blue-500">React</span>,
           <span className="text-blue-300"> Flutter</span> and
           <span className="text-orange-400"> Rust</span> developer.
@@ -43,99 +42,83 @@ function App() {
           </Link>
         </div>
       </div>
-      <div className="px-4 md:px-8 text-lg">
-        <h1 className="text-3xl md:text-6xl font-bold text-center">Skills</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-8">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center text-4xl text-blue-500">
-                React
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              React is my favorite frontend framework, I have built many
-              different projects using React.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center text-4xl text-blue-400">
-                Flutter
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              Flutter is my favorite mobile framework, I have built many
-              different apps using Flutter using backends like Firebase.
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center text-4xl text-orange-400">
-                Rust
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              Rust is my favorite language for building native software. I have
-              built many different projects using Rust.
-            </CardContent>
-          </Card>
+
+      {/* Skills Section */}
+      <section className={sectionWrapper}>
+        <h1 className={titleStyles}>Skills</h1>
+        <div className={cardGrid}>
+          {[
+            {
+              title: "React",
+              color: "text-blue-500",
+              desc: "React is my favorite frontend framework, I have built many different projects using React.",
+            },
+            {
+              title: "Flutter",
+              color: "text-blue-400",
+              desc: "Flutter is my favorite mobile framework, I have built many different apps using Flutter using backends like Firebase.",
+            },
+            {
+              title: "Rust",
+              color: "text-orange-400",
+              desc: "Rust is my favorite language for building native software. I have built many different projects using Rust.",
+            },
+          ].map(({ title, color, desc }) => (
+            <Card key={title}>
+              <CardHeader>
+                <CardTitle className={`text-center text-4xl ${color}`}>
+                  {title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>{desc}</CardContent>
+            </Card>
+          ))}
         </div>
-      </div>
-      <div className="px-4 md:px-8 text-lg mt-4">
-        <h1 className="text-3xl md:text-6xl font-bold text-center">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Shadcn Chat</CardTitle>
-              <CardDescription>React, Firebase</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Shadcn Chat is a chat app built using React and Firebase, it
-              supports realtime messaging and authentication.
-            </CardContent>
-            <CardFooter>
-              <a href="https://chat.flandolf.site">
-                <Button variant="outline">View</Button>
-              </a>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Validator95 + 95gen</CardTitle>
-              <CardDescription>Rust, Egui</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Validator95 validates Windows 95 and Office 95 keys using the
-              original algorithm. Gen95 generates keys for Windows 95 and Office
-              95.
-            </CardContent>
-            <CardFooter>
-              <a
-                href="
-              https://github.com/flandolf/95gen
-              "
-              >
-                <Button variant="outline">View</Button>
-              </a>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Audioplayer</CardTitle>
-              <CardDescription>Flutter, Youtube</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Audioplayer is a music player app built using Flutter and Youtube
-              API, it supports searching and playing music.
-            </CardContent>
-            <CardFooter>
-              <a href="https://github.com/flandolf/audioplayer">
-                <Button variant="outline">View</Button>
-              </a>
-            </CardFooter>
-          </Card>
+      </section>
+
+      {/* Projects Section */}
+      <section className={`${sectionWrapper} mt-4`}>
+        <h1 className={titleStyles}>Projects</h1>
+        <div className={cardGrid}>
+          {[
+            {
+              title: "Shadcn Chat",
+              desc: "React, Firebase",
+              content:
+                "Shadcn Chat is a chat app built using React and Firebase, it supports realtime messaging and authentication.",
+              link: "https://chat.flandolf.site",
+            },
+            {
+              title: "Validator95 + 95gen",
+              desc: "Rust, Egui",
+              content:
+                "Validator95 validates Windows 95 and Office 95 keys using the original algorithm. Gen95 generates keys for Windows 95 and Office 95.",
+              link: "https://github.com/flandolf/95gen",
+            },
+            {
+              title: "Audioplayer",
+              desc: "Flutter, Youtube",
+              content:
+                "Audioplayer is a music player app built using Flutter and Youtube API, it supports searching and playing music.",
+              link: "https://github.com/flandolf/audioplayer",
+            },
+          ].map(({ title, desc, content, link }) => (
+            <Card key={title}>
+              <CardHeader>
+                <CardTitle>{title}</CardTitle>
+                <CardDescription>{desc}</CardDescription>
+              </CardHeader>
+              <CardContent>{content}</CardContent>
+              <CardFooter>
+                <a href={link}>
+                  <Button variant="outline">View</Button>
+                </a>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
-      </div>
+      </section>
+
       <Footer />
     </div>
   );

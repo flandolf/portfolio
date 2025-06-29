@@ -6,8 +6,8 @@ function About() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-grow text-start py-8 px-4 sm:px-8 space-y-3">
-        <h1 className="text-4xl md:text-8xl font-bold">About</h1>
-        <h2 className="text-2xl md:text-4xl font-bold text-orange-400">
+        <h1 className="text-4xl md:text-6xl font-bold">About</h1>
+        <h2 className="text-2xl md:text-4xl font-bold text-pink-400">
           Hi, I'm Andy!
         </h2>
         <p className="text-lg md:text-xl">

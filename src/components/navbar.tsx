@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <nav className="flex flex-row justify-between space-x-3 py-2 px-8">
       <div>
-        <a href="/" className="text-orange-400 font-bold text-2xl">
+        <a href="/" className="text-pink-400 font-bold text-2xl">
           f!
         </a>
       </div>
